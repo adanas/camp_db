@@ -1,22 +1,21 @@
-import 'package:camp_database/signup/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'login_model.dart';
+import 'signup_model.dart';
 
-class LoginPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     final mailController = TextEditingController();
     final passwordController = TextEditingController();
 
-    return ChangeNotifierProvider<LoginModel>(
-      create: (_) => LoginModel(),
+    return ChangeNotifierProvider<SignUpModel>(
+      create: (_) => SignUpModel(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('login'),
+          title: Text('sign up'),
         ),
-        body: Consumer<LoginModel>(
+        body: Consumer<SignUpModel>(
             builder: (context, model, child) {
               return Column(children: <Widget>[
                 // メールアドレス
@@ -42,11 +41,11 @@ class LoginPage extends StatelessWidget {
                     );
                   },
                 ),
-                // ログインボタン
+                // 登録ボタン
                 SizedBox(
                   width: 90,
                   child: ElevatedButton(
-                    child: Text('login'),
+                    child: Text('sign up'),
                     onPressed: () async {
                       try {
                         // await model.login();
@@ -62,19 +61,6 @@ class LoginPage extends StatelessWidget {
                     },
                   ),
                 ),
-                // 新規登録ボタン
-                SizedBox(
-                  width: 90,
-                  child: ElevatedButton(
-                    child: Text('sign up'),
-                    onPressed: () async {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUpPage()),
-                      );
-                    },
-                  ),
-                )
               ],
               );
             }
