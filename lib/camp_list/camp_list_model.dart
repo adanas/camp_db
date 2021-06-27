@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginModel extends ChangeNotifier {
+class CampListModel extends ChangeNotifier {
   String mail = '';
   String password = '';
 

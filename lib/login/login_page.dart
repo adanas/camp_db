@@ -1,3 +1,4 @@
+import 'package:camp_database/camp_list/camp_list_page.dart';
 import 'package:camp_database/signup/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -49,12 +50,12 @@ class LoginPage extends StatelessWidget {
                     child: Text('login'),
                     onPressed: () async {
                       try {
-                        // await model.login();
-                        // //_showDialog(context, 'ログイン完了');
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => BookListPage()),
-                        // );
+                        await model.login();
+                        //_showDialog(context, 'ログイン完了');
+                        Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => CampListPage()),
+                        );
                       }
                       catch(e) {
                         _showDialog(context, e.toString());

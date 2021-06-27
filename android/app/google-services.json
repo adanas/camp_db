@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "481039504997",
+    "project_id": "camp-db-10dbf",
+    "storage_bucket": "camp-db-10dbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481039504997:android:3b7a389ab245701064588c",
+        "android_client_info": {
+          "package_name": "com.example.camp_database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481039504997-72fd73dbv909ounn2kq0pbhcc8cup6gd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcPWGYLjftOp_II-BhSVbUW26LxIlw_qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481039504997-72fd73dbv909ounn2kq0pbhcc8cup6gd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481039504997:android:1cf92b21b6b3a80864588c",
+        "android_client_info": {
+          "package_name": "net.adanas.camp_database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481039504997-72fd73dbv909ounn2kq0pbhcc8cup6gd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcPWGYLjftOp_II-BhSVbUW26LxIlw_qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481039504997-72fd73dbv909ounn2kq0pbhcc8cup6gd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
