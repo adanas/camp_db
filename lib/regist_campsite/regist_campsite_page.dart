@@ -1,17 +1,17 @@
-import 'package:camp_database/regist_campsite/regist_campsite_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'camp_list_model.dart';
+import 'regist_campsite_model.dart';
 
-class CampListPage extends StatelessWidget {
+class RegistCampSitePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<CampListModel>(
-      create: (_) => CampListModel(),
+
+    return ChangeNotifierProvider<RegistCampSiteModel>(
+      create: (_) => RegistCampSiteModel(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('camp list'),
+          title: Text('Regist Campsite'),
           actions: [
             PopupMenuButton(itemBuilder: (context)=> [
               PopupMenuItem(child:
@@ -21,25 +21,32 @@ class CampListPage extends StatelessWidget {
             ]),
           ],
         ),
-        body: Consumer<CampListModel>(
+        body: Consumer<RegistCampSiteModel>(
             builder: (context, model, child) {
               return Column(children: <Widget>[
                 Center(
-                  child: Text('camp list'),
+                  child: Text('regist camp site'),
                 ),
-
+                // 登録ボタン
+                SizedBox(
+                  width: 90,
+                  child: ElevatedButton(
+                    child: Text('regist'),
+                    onPressed: () async {
+                      try {
+                        //await model.signup();
+                        //_showDialog(context, '登録完了');
+                        Navigator.of(context).pop();
+                      }
+                      catch(e) {
+                        _showDialog(context, e.toString());
+                      }
+                    },
+                  ),
+                ),
               ],
               );
             }
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: (){
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => RegistCampSitePage()),
-            );
-          },
         ),
       ),
     );

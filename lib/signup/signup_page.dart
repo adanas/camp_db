@@ -1,4 +1,3 @@
-import 'package:camp_database/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'signup_model.dart';
